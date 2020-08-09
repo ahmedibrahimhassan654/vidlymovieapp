@@ -3,16 +3,16 @@ import React from 'react';
 import Like from '../common/like';
 const MoviesTable = (props) => {
 
-    const { movies, onDelete, onLike } = props;
+    const { movies, onDelete, onLike ,onSort} = props;
     return (
         <table className="table table-hover " >
             <thead>
                 <tr>
-                    <th scope="col">title</th>
-                    <th scope="col">genre</th>
-                    <th scope="col">Stock</th>
-                    <th scope="col">Rate</th>
-                    <th scope="col">publishDate</th>
+                    <th scope="col" onClick={()=>onSort('title')}>title</th>
+                    <th scope="col" onClick={()=>onSort('genre')}>genre</th>
+                    <th scope="col" onClick={()=>onSort('stock')}>Stock</th>
+                    <th scope="col" onClick={()=>onSort('rate')}>Rate</th>
+                    <th scope="col" onClick={()=>onSort('publishDate')}>publishDate</th>
                     <th />
                     <th />
                 </tr>
